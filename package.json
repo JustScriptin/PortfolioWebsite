@@ -1,0 +1,32 @@
+{
+  "engines": {
+    "node": "12.19.0"
+  },
+  "name": "MiniProject1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustScriptin/PortfolioWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustScriptin/PortfolioWebsite/issues"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "mongoose": "^5.11.13"
+  },
+  "homepage": "https://github.com/JustScriptin/PortfolioWebsite#readme"
+}
+
