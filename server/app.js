@@ -6,8 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGOURI =
-  "mongodb+srv://database:Hyperpass0!@cluster0.maaco.mongodb.net/profile?retryWrites=true&w=majority";
+const MONGOURI = process.env.MONGOURI;
 const cors = require("cors");
 
 //app.set("port", PORT);
