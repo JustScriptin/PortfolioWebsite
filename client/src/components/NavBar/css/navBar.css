@@ -20,3 +20,7 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.resumeButton {
   color: white;
   background-color: #de354c;
 }
+
+a.navBarButtonLink {
+  text-decoration: none;
+}

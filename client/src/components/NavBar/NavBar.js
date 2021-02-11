@@ -30,7 +30,10 @@ export default function NavBar() {
           <Typography variant="h6" className={classes.title}>
             Justin Padilla
           </Typography>
-          <a href="https://mega.nz/file/918UkD4a#p9kUzb7ukkO_hsjZRXr5R9LwPR5Cki2H80z6gh_5KpI">
+          <a
+            href="https://mega.nz/file/918UkD4a#p9kUzb7ukkO_hsjZRXr5R9LwPR5Cki2H80z6gh_5KpI"
+            className="navBarButtonLink"
+          >
             <Button className="resumeButton">Download Resume</Button>
           </a>
         </Toolbar>

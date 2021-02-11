@@ -3,54 +3,29 @@ import "./css/portfolioSection.css";
 import img1 from "./assets/img1.png";
 import img2 from "./assets/img2.png";
 import img3 from "./assets/img3.png";
+import DisplayCards from "../DisplayCards/DisplayCards";
 
 function PortfolioSection() {
-  const [currentMoreInfoClass, setCurrentMoreInfoClass] = useState(
-    "moreInfo hidden"
-  );
-
-  const handleHideText = () => {
-    setCurrentMoreInfoClass(
-      currentMoreInfoClass === "moreInfo hidden"
-        ? setCurrentMoreInfoClass("moreInfo")
-        : setCurrentMoreInfoClass("moreInfo hidden")
-    );
-  };
   return (
-    <a id="portfolioSection">
-      <div className="portfolioContainer">
-        <div>
-          <a href="#" className="portfolioSectionATags">
-            <img src={img1} alt="" className="portimg" />
-          </a>
-          <p>Hood Rats</p>
-          <p className={"clickForMore"} onClick={handleHideText}>
-            (Click For More)
-          </p>
-          <p className={currentMoreInfoClass} onClick={handleHideText}>
-            Hood Rats is a Tug-of-War browser based game written in Javascript,
-            Css and HTML. I practiced DOM manipulation, recursion and UI/UX
-            design.
-          </p>
-        </div>
-
-        <div>
-          <a href="#" className="portfolioSectionATags">
-            <img src={img2} alt="" className="portimg" />
-          </a>
-          <p>Blubber Burger</p>
-          <p className="clickForMore">(Click For More)</p>
-        </div>
-
-        <div>
-          <a href="#" className="portfolioSectionATags">
-            <img src={img3} alt="" className="portimg" />
-          </a>
-          <p>Portfolio Website</p>
-          <p className="clickForMore">(Click For More)</p>
-        </div>
-      </div>
-    </a>
+    <div className="portfolioContainer">
+      <DisplayCards
+        img={img1}
+        heading="Hood Rats"
+        description="Hood Rats is a Tug-of-War browser based game written in Javascript,
+          Css and HTML. I practiced DOM manipulation and recursion.
+          design."
+      />
+      <DisplayCards
+        img={img2}
+        heading="Portfolio Website"
+        description="My website is made using React and its hosted using Heroku. It demonstrates the ability to use props as seen in these card components as well as demostrating a mastery of responsive UI/UX design, functional components, useState hook and basic understanding of typography."
+      />
+      <DisplayCards
+        img={img3}
+        heading="Blubber Burger"
+        description="Blubber Burger was made to show off my knowledge in back-end development using Express and MongoDB as well as my experience using and styling materialUI components. This RESTful app contains fully functional CRUD routes as displayed on the menu section."
+      />
+    </div>
   );
 }
 

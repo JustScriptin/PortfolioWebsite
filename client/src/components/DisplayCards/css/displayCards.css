@@ -1,0 +1,58 @@
+.displayCardImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.displayCardImg:hover {
+  opacity: 0.45;
+  mix-blend-mode: screen;
+}
+
+.displayCardImgLink {
+  background-color: #3c1874;
+  display: inline-block;
+  border-radius: 12px;
+  transition: 00.3s;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0;
+}
+
+div.clickForMoreContainer {
+  display: flex;
+  justify-content: center;
+}
+
+p.clickForMore {
+  color: #f3f3f3;
+  font-size: small;
+  padding-top: 0;
+  cursor: pointer;
+}
+
+p.clickForMore:hover {
+  transform: scale(1.01);
+}
+
+p.moreInfo {
+  background-color: rgba(40, 55, 71, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 7px;
+  margin-top: 3rem;
+  color: #f3f3f3;
+  filter: drop-shadow(1px 1px 1.5px black);
+  font-size: 1.5rem;
+}
+
+p.moreInfo.close {
+  display: none;
+}
+
+p.displayCardHeading {
+  color: #f3f3f3;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
