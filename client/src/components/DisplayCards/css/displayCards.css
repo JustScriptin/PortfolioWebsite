@@ -30,6 +30,7 @@ p.clickForMore {
   font-size: small;
   padding-top: 0;
   cursor: pointer;
+  user-select: none;
 }
 
 p.clickForMore:hover {
