@@ -1,7 +1,22 @@
 import React from "react";
 import "./css/footer.css";
+import gsap from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 
 function Footer() {
+  const handleScroll = (event) => {
+    event === "portfolioContainer"
+      ? gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: ".portfolioContainer", offsetY: 150 },
+        })
+      : gsap.to(window, {
+          duration: 1,
+          scrollTo: ".aboutMe",
+        });
+  };
+
   return (
     <>
       <footer className="footer">
@@ -9,10 +24,12 @@ function Footer() {
         <ul className="footerTxt">
           <a href="#">
             {" "}
-            <li>About me</li>{" "}
+            <li onClick={() => handleScroll("aboutMe")}>About me</li>{" "}
           </a>
           <a href="#">
-            <li>Portfolio</li>{" "}
+            <li onClick={() => handleScroll("portfolioContainer")}>
+              Portfolio
+            </li>{" "}
           </a>
           <a href="#">
             <li>Contact me</li>{" "}

@@ -9,6 +9,9 @@ import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import { IoMdMenu } from "react-icons/io";
 import IconButton from "@material-ui/core/IconButton";
+import gsap from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,8 +30,24 @@ export default function MenuPopup() {
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
+  const handleScroll = (event) => {
+    if (event === "portfolioContainer") {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: ".portfolioContainer", offsetY: 150 },
+      });
+    } else if (event === "aboutMe") {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: ".aboutMe",
+      });
+    } else {
+      return null;
+    }
+  };
 
   const handleClose = (event) => {
+    handleScroll(event);
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
@@ -61,7 +80,7 @@ export default function MenuPopup() {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          <IoMdMenu />
+          <IoMdMenu className="navBarBurgerMenu" />
         </IconButton>
         <Popper
           open={open}
@@ -84,10 +103,10 @@ export default function MenuPopup() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem disabled onClick={handleClose}>
+                    <MenuItem onClick={() => handleClose("aboutMe")}>
                       About Me
                     </MenuItem>
-                    <MenuItem disabled onClick={handleClose}>
+                    <MenuItem onClick={() => handleClose("portfolioContainer")}>
                       Portfolio
                     </MenuItem>
                     <MenuItem onClick={handleClose}>Contact Me</MenuItem>

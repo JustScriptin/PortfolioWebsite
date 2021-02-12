@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import "./css/navBar.css";
 import MenuPopup from "../MenuPopup/MenuPopup";
+import { gsap } from "gsap";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,12 +23,37 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar() {
   const classes = useStyles();
 
+  let t1 = gsap.timeline({ delay: 0 });
+
+  useEffect(() => {
+    t1.from("#justinPadilla", {
+      xPercent: -100,
+      ease: "power3.easeOut",
+      opacity: 0,
+      delay: 0.2,
+      duration: 1.2,
+    })
+      .from(".navBarBurgerMenu", {
+        yPercent: 100,
+        opacity: 0,
+        ease: "power3.easeOut",
+      })
+      .from(
+        ".resumeButton",
+        {
+          yPercent: 100,
+          opacity: 0,
+          ease: "power3.easeOut",
+        },
+        "<"
+      );
+  }, []);
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <MenuPopup />
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} id="justinPadilla">
             Justin Padilla
           </Typography>
           <a
