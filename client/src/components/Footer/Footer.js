@@ -9,7 +9,10 @@ function Footer() {
     event === "portfolioContainer"
       ? gsap.to(window, {
           duration: 1,
-          scrollTo: { y: ".portfolioContainer", offsetY: 150 },
+          scrollTo: {
+            y: ".portfolioContainer",
+            offsetY: 150,
+          },
         })
       : gsap.to(window, {
           duration: 1,

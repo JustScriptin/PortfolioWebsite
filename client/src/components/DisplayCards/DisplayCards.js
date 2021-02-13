@@ -11,7 +11,7 @@ function DisplayCards(props) {
   };
   return (
     <div>
-      <a href="#" className="displayCardImgLink">
+      <a href={props.link} className="displayCardImgLink">
         <img src={props.img} alt="" className="displayCardImg" />
       </a>
       <p className="displayCardHeading">{props.heading}</p>
