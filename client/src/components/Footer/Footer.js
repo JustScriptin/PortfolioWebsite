@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/footer.css";
 import gsap from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -19,6 +19,19 @@ function Footer() {
           scrollTo: ".aboutMe",
         });
   };
+
+  useEffect(() => {
+    gsap.from(".profilePic", {
+      scrollTrigger: {
+        trigger: ".profilePic",
+      },
+      opacity: 0,
+      xPercent: -100,
+      ease: "slow",
+      rotation: -360,
+      duration: 1.2,
+    });
+  }, []);
 
   return (
     <>

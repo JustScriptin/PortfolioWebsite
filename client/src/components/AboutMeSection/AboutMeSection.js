@@ -1,13 +1,13 @@
 import React from "react";
 import "./css/aboutMeSection.css";
-import img1 from "./assets/img1.png";
+import img1 from "./assets/img1.jpg";
 
 function AboutMeSection() {
   return (
     <>
-      <div className="aboutMe" id="aboutMeSectionAnchor">
+      <div className="aboutMe">
         <div className="image">
-          <img src={img1} alt="" />
+          <img className="profilePic" src={img1} alt="" />
         </div>
         <h2 className="heading"> About Me </h2>
         <p className="paragraph">
