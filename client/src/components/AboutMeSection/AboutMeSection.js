@@ -30,7 +30,6 @@ function AboutMeSection() {
       scrollTrigger: {
         trigger: paragraphRef.current,
         scrub: 1,
-        markers: true,
       },
     });
 
