@@ -25,11 +25,12 @@ function AboutMeSection() {
   useEffect(() => {
     gsap.from(paragraphRef.current, {
       autoAlpha: 0,
-      yPercent: 100,
+      yPercent: 5,
       ease: "power3.out",
       scrollTrigger: {
         trigger: paragraphRef.current,
         scrub: 1,
+        markers: true,
       },
     });
 
