@@ -36,7 +36,7 @@ function Footer() {
               Portfolio
             </li>{" "}
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/justscriptin/">
             <li>Contact me</li>{" "}
           </a>
         </ul>

@@ -41,6 +41,8 @@ export default function MenuPopup() {
         duration: 1,
         scrollTo: ".aboutMe",
       });
+    } else if (event === "contactMe") {
+      window.location.href = "https://www.linkedin.com/in/justscriptin/";
     } else {
       return null;
     }
@@ -109,7 +111,9 @@ export default function MenuPopup() {
                     <MenuItem onClick={() => handleClose("portfolioContainer")}>
                       Portfolio
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Contact Me</MenuItem>
+                    <MenuItem onClick={() => handleClose("contactMe")}>
+                      Contact Me
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
