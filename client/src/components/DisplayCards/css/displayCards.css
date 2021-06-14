@@ -1,59 +1,49 @@
-.displayCardImg {
+span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background: #de354c;
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.7;
+}
+
+.swiper-container {
   width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: 0.3s;
+  height: 100%;
+  padding: 4rem 0;
 }
 
-.displayCardImg:hover {
-  opacity: 0.45;
-  mix-blend-mode: screen;
-}
-
-.displayCardImgLink {
-  background-color: #3c1874;
-  display: inline-block;
-  border-radius: 12px;
-  transition: 00.3s;
-  text-decoration: none;
+.swiper-slide {
   text-align: center;
-  font-size: 0;
-}
+  font-size: 18px;
+  background: #3c1874;
+  color: white;
 
-div.clickForMoreContainer {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-p.clickForMore {
-  color: #f3f3f3;
-  font-size: small;
-  padding-top: 0;
-  cursor: pointer;
-  user-select: none;
+.swiper-slide img,
+.swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-p.clickForMore:hover {
-  transform: scale(1.01);
-}
-
-p.moreInfo {
-  background-color: rgba(40, 55, 71, 0.5);
-  padding: 1rem 2rem;
-  border-radius: 7px;
-  margin-top: 3rem;
-  color: #f3f3f3;
-  filter: drop-shadow(1px 1px 1.5px black);
-  font-size: 1.5rem;
-}
-
-p.moreInfo.close {
-  display: none;
-}
-
-p.displayCardHeading {
-  color: #f3f3f3;
-  padding-top: 1.5rem;
-  font-size: 1.5rem;
-  margin-bottom: 0.2rem;
+div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  padding-bottom: 1rem;
 }

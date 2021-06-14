@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./css/heroCarousel.css";
-import img1 from "./assets/img1.png";
-import img2 from "./assets/img2.png";
-import img3 from "./assets/img3.png";
+import img1 from "./assets/img1.PNG";
+import img2 from "./assets/img2.PNG";
+import img3 from "./assets/img3.PNG";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 function HeroCarousel() {

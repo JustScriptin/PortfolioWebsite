@@ -6,20 +6,18 @@
 }
 
 .portfolioContainer {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: center;
+  align-items: center; */
   background-color: #3c1874;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
   filter: drop-shadow(0 3px 9px rgba(0, 0, 0, 0.404));
-  flex: 1 1 33vw;
+  /* flex: 1 1 33vw; */
 }
 
 @media screen and (max-width: 810px) {
   .portfolioContainer {
-    flex-direction: column;
-    justify-content: center;
     margin: 0 1rem;
   }
 }
