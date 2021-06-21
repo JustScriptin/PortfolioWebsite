@@ -69,6 +69,11 @@ function DisplayCards() {
               loop
               title="Learn More"
               draggable="false"
+              onContextMenu={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+              }}
             ></video>
           </Link>
         </SwiperSlide>
@@ -90,6 +95,11 @@ function DisplayCards() {
               loop
               title="Learn More"
               draggable="false"
+              onContextMenu={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+              }}
             ></video>
           </Link>
         </SwiperSlide>
@@ -110,6 +120,11 @@ function DisplayCards() {
               loop
               title="Learn More"
               draggable="false"
+              onContextMenu={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+              }}
             ></video>
           </Link>
         </SwiperSlide>
@@ -130,6 +145,11 @@ function DisplayCards() {
               loop
               title="Learn More"
               draggable="false"
+              onContextMenu={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+              }}
             ></video>
           </Link>
         </SwiperSlide>
@@ -150,6 +170,11 @@ function DisplayCards() {
               loop
               title="Learn More"
               draggable="false"
+              onContextMenu={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+              }}
             ></video>
           </Link>
         </SwiperSlide>

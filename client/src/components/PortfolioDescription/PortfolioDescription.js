@@ -114,6 +114,11 @@ function PortfolioDescription(props) {
                   event.target.pause(), event.target.load()
                 )}
                 loop
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                }}
               />
               <CardActions className={classes.cardActions}>
                 <Button
