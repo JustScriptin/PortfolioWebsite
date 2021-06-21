@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
-    padding: "16px 16px 4px 16px",
+    padding: "16px 0px 4px 16px",
   },
   projectDescription: {
     paddingTop: "10px",
