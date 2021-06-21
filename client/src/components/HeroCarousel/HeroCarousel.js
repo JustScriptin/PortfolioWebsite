@@ -3,10 +3,11 @@ import "./css/heroCarousel.css";
 import img1 from "./assets/img1.PNG";
 import img2 from "./assets/img2.PNG";
 import img3 from "./assets/img3.PNG";
+import img4 from "../DisplayCards/assets/tailWindSite.png";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 function HeroCarousel() {
-  const carouselImgs = [img1, img2, img3];
+  const carouselImgs = [img1, img2, img3, img4];
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselImgsLength = carouselImgs.length;
 

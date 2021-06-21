@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&display=swap");
 
 header.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 header.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
@@ -17,6 +17,11 @@ span.MuiIconButton-label {
 }
 
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.resumeButton {
+  color: white;
+  background-color: #de354c;
+}
+
+a.MuiButtonBase-root.MuiButton-root.MuiButton-text.resumeButton {
   color: white;
   background-color: #de354c;
 }

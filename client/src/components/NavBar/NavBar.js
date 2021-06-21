@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import "./css/navBar.css";
 import MenuPopup from "../MenuPopup/MenuPopup";
 import { gsap } from "gsap";
+import resume from "./assets/justin-padilla-resume.pdf";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,9 +19,12 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  dropShadow: {
+    filter: "drop-shadow(0 3px 9px rgba(0, 0, 0, 0.404))",
+  },
 }));
 
-export default function NavBar() {
+function NavBar(props) {
   const classes = useStyles();
 
   let t1 = gsap.timeline({ delay: 0 });
@@ -50,20 +54,23 @@ export default function NavBar() {
   }, []);
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={props.style}>
         <Toolbar>
           <MenuPopup />
           <Typography variant="h6" className={classes.title} id="justinPadilla">
             Justin Padilla
           </Typography>
-          <a
-            href="https://mega.nz/file/918UkD4a#p9kUzb7ukkO_hsjZRXr5R9LwPR5Cki2H80z6gh_5KpI"
-            className="navBarButtonLink"
+          <Button
+            className="resumeButton"
+            href={resume}
+            download="justin-padilla-resume"
           >
-            <Button className="resumeButton">Download Resume</Button>
-          </a>
+            Download Resume
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
+export default NavBar;

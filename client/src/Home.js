@@ -7,6 +7,7 @@ import HeroCarousel from "./components/HeroCarousel/HeroCarousel";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 
+const load = true;
 function Home() {
   return (
     <>

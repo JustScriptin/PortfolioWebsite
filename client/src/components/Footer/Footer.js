@@ -25,7 +25,7 @@ function Footer() {
   return (
     <>
       <footer className="footer">
-        <p>Website made on feb 1, 2021 and being updated continuously.</p>
+        <p>Website upadted on Jun 21, 2021 and being updated continuously.</p>
         <ul className="footerTxt">
           <a href="#">
             {" "}
