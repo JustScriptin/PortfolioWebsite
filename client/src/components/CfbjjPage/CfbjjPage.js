@@ -32,7 +32,7 @@ function CfbjjPage() {
         liveSite="https://cfbjj.netlify.app"
         githubRepo="https://github.com/JustScriptin/CFBJJ"
         projectName="Central Florida Brazilian Jiu-Jitsu"
-        projectDescription="This Is my most recent project made to highlight my how I put together a beautiful website from scratch for my friend’s business using a react application which boasts amazing load times, use of Instagrams basic display API, organization and reusability with over 20 components, aesthetic and consistent theme design as well as having excellent navigability."
+        projectDescription="This Is my most recent project made to highlight how I put together a beautiful website from scratch for my friend’s business using a React application which boasts amazing load times, use of Instagrams basic display API, organization and reusability with over 20 components, aesthetic and consistent theme design as well as having excellent navigability."
         componentHeadings="Top 5 Intersting Components ~"
         componentName1="Instagram Gallery"
         componentLink1="https://github.com/JustScriptin/CFBJJ/blob/main/src/components/InstagramGallery/InstagramGallery.js"
