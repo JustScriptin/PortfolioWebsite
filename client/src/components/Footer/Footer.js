@@ -3,6 +3,7 @@ import "./css/footer.css";
 import gsap from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ReactGA from "react-ga";
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +37,15 @@ function Footer() {
               Portfolio
             </li>{" "}
           </a>
-          <a href="https://www.linkedin.com/in/justscriptin/">
+          <a
+            href="https://www.linkedin.com/in/justscriptin/"
+            onClick={() => {
+              ReactGA.event({
+                category: "Button",
+                action: `Clicked on Contact Me on the footer`,
+              });
+            }}
+          >
             <li>Contact me</li>{" "}
           </a>
         </ul>

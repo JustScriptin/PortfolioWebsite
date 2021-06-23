@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import { IoMdArrowBack } from "react-icons/io";
 import { gsap } from "gsap";
 import resume from "../NavBar/assets/justin-padilla-resume.pdf";
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,6 +73,12 @@ function PortfolioPageNavBar() {
             className="resumeButton"
             href={resume}
             download="justin-padilla-resume"
+            onClick={() => {
+              ReactGA.event({
+                category: "Button",
+                action: "Download Resume from Portfolio Page",
+              });
+            }}
           >
             Download Resume
           </Button>

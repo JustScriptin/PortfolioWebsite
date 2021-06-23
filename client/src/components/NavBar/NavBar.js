@@ -8,6 +8,7 @@ import "./css/navBar.css";
 import MenuPopup from "../MenuPopup/MenuPopup";
 import { gsap } from "gsap";
 import resume from "./assets/justin-padilla-resume.pdf";
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,6 +65,12 @@ function NavBar(props) {
             className="resumeButton"
             href={resume}
             download="justin-padilla-resume"
+            onClick={() => {
+              ReactGA.event({
+                category: "Button",
+                action: "Download Resume from Home Page",
+              });
+            }}
           >
             Download Resume
           </Button>

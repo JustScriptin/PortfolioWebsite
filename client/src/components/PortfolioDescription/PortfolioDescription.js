@@ -16,6 +16,7 @@ import { SiGithub } from "react-icons/si";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
 import { IoLogoWebComponent } from "react-icons/io5";
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles((theme) => ({
   pageWrapper: {
@@ -129,6 +130,12 @@ function PortfolioDescription(props) {
                   variant="contained"
                   target="_blank"
                   href={props.liveSite}
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "Button",
+                      action: `Clicked on ${props.liveSite}`,
+                    });
+                  }}
                 >
                   <BiWorld className={classes.icons} /> Live Site
                 </Button>

@@ -11,6 +11,7 @@ import { IoMdMenu } from "react-icons/io";
 import IconButton from "@material-ui/core/IconButton";
 import gsap from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import ReactGA from "react-ga";
 gsap.registerPlugin(ScrollToPlugin);
 
 const useStyles = makeStyles((theme) => ({
@@ -43,6 +44,11 @@ export default function MenuPopup() {
       });
     } else if (event === "contactMe") {
       window.location.href = "https://www.linkedin.com/in/justscriptin/";
+
+      ReactGA.event({
+        category: "Button",
+        action: `Clicked on Contact Me from hamburger menu`,
+      });
     } else {
       return null;
     }
